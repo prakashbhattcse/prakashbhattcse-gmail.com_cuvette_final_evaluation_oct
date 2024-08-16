@@ -108,26 +108,23 @@
   color: red;
 }
 
-
-.assignInput{
+.assignInput {
   width: 80%;
   padding: 8px 15px;
-  border: 2px solid #D9D9D9;
+  border: 2px solid #d9d9d9;
   outline: none;
   font-size: 17px;
 
-
-  option button{
+  option button {
     padding: 6px 14px;
-    border: 2px solid #D9D9D9;
+    border: 2px solid #d9d9d9;
   }
 
-
-  option{
+  option {
     padding: 8px 15px;
     height: 1rem;
     display: flex;
-  justify-content: space-between;
+    justify-content: space-between;
   }
 }
 
@@ -142,13 +139,12 @@
   display: flex;
   gap: 13px;
 }
-
 .chip {
   border-radius: 5px;
-  border: 2px solid #e2e2e2;
-  background-color: #ffffff;
+  border: 2px solid transparent; /* Default border */
+  background-color: #ffffff; /* Default background color */
   outline: none;
-  padding: 4px 2px;
+  padding: 9px 2px;
   width: 10rem;
   display: flex;
   gap: 5px;
@@ -156,6 +152,25 @@
   align-items: center;
   font-size: 13px;
   cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Define active styles for different priorities */
+.chip.active.high {
+  border-color: #f15050; /* Red border for high priority */
+}
+
+.chip.active.moderate {
+  border-color: #d49000; /* Orange border for moderate priority */
+}
+
+.chip.active.low {
+  border-color: #478049; /* Green border for low priority */
+}
+
+.chip.active {
+  background-color: #efefef; /* Common background color for active chips */
 }
 
 .chipCircle {
@@ -166,7 +181,7 @@
 }
 
 #redCircle {
-  background-color: red;
+  background-color: rgb(241, 80, 80);
 }
 
 #blueCircle {
@@ -176,7 +191,6 @@
 #greenCircle {
   background-color: rgb(0, 255, 38);
 }
-
 
 .redCircle {
   background-color: red;
@@ -278,7 +292,6 @@
 
 /* TODO CARDS */
 
-
 .tooltip {
   position: relative;
   display: inline-block;
@@ -307,7 +320,6 @@
   opacity: 1;
 }
 
-
 .dataCardWrap {
   display: flex;
   gap: 1rem;
@@ -317,7 +329,7 @@
   scrollbar-width: thin;
   scrollbar-color: #8daab9 #d6eaf4;
   margin-top: 1rem;
-  padding: .7rem 0 3rem 0;
+  padding: 0.7rem 0 3rem 0;
 }
 
 .todoCard {
@@ -375,9 +387,7 @@
 
 @media (max-width: 600px) {
   .checboxCardWrap {
-  
     gap: 1.2rem;
-
   }
 }
 
@@ -443,8 +453,7 @@
 .peopleBtnWrap {
   display: flex;
   gap: 1rem;
-  margin-top: .8rem;
-
+  margin-top: 0.8rem;
 
   button {
     width: 50%;
@@ -454,20 +463,15 @@
   }
 }
 
-
-.addBtn{
-
+.addBtn {
 }
-
-
-
 
 /* dropdown */
 
 .customDropdown {
   position: relative;
   display: inline-block;
-  width: 75%;
+  width: 77%;
 }
 
 .dropdownButton {
@@ -483,7 +487,7 @@
   display: flex;
   justify-content: space-between;
 
-  button{
+  button {
     border: none;
     background-color: transparent;
     font-size: 1.1rem;
@@ -500,14 +504,13 @@
   z-index: 1;
   width: 100%;
 
-
-  button{
+  button {
     padding: 7px 5px;
     width: 9rem;
     border-radius: 7px;
     background-color: transparent;
     outline: none;
-    border: 2px solid #E2E2E2;
+    border: 2px solid #e2e2e2;
     color: #767575;
     font-weight: 600;
   }
@@ -524,7 +527,6 @@
   background-color: #17a2b8;
   color: white;
 }
-
 
 /* Board.module.css */
 
@@ -547,4 +549,3 @@
   color: inherit; /* Ensure text color remains unchanged */
   /* Any other styles you want for the button with no due date */
 }
-
